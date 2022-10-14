@@ -11,14 +11,25 @@ namespace RazorPagesPizza.Pages
 
       [BindProperty]
       public Pizza NewPizza { get; set; }
-        public void OnGet()
-        {
-          pizzas = PizzaService.GetAll();
-        }
+
+      public void OnGet()
+      {
+        pizzas = PizzaService.GetAll();
+      }
 
       public string GlutenFreeText(Pizza pizza)
       {
         return pizza.IsGlutenFree ? "Gluten Free" : "Not Gluten Free";
+      }
+
+      public IActionResult OnPost()
+      {
+        if (!ModelState.IsValid)
+        {
+          return Page();
+        }
+        PizzaService.Add(NewPizza);
+        return RedirectToAction("Get");
       }
     }
 }
