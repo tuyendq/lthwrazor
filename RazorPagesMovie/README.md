@@ -2,11 +2,22 @@
 
 
 ```
-
+# Create a Razor Pages web app.
 dotnet new webapp -o RazorPagesMovie
+# Run VS Code
 code -r .\RazorPagesMovie\
-
+# Create README.md file
 ni -Type File README.md
+
+# first run to check
+dotnet run
+
+# Or keep monitoring changes
+dotnet watch run
+
+# Add a data model Movie
+ni -Type File .\Models\Movie.cs -Force
+
 
 
 ```
