@@ -26,6 +26,10 @@ ni -Type File .\Models\Movie.cs -Force
 # Scaffold the Movie model
 dotnet add package Microsoft.EntityFrameworkCore.Design
 
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+
+dotnet add package Microsoft.EntityFrameworkCore.Sqlite
+
 dotnet-aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries -sqlite
 
 ```
