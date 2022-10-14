@@ -9,5 +9,7 @@ dotnet new page --name Pizza --namespace RazorPagesPizza.Pages --output Pages
 
 ni -Type File .\Models\Pizza.cs -Force  # Create Pizza model
 
+ni -Type File .\Services\PizzaService.cs -Force  # Add data service
+
 
 ```
