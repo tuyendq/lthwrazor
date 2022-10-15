@@ -18,6 +18,7 @@ If you're new to Razor Pages, go through the [Get started with Razor Pages](http
 ```
 ni -Type File .\Models\Student.cs -Force
 ni -Type File .\Models\Enrollment.cs -Force
+ni -Type File .\Models\Course.cs -Force
 
 ```
 
