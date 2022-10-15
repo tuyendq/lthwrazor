@@ -43,6 +43,20 @@ ni -Type File .\Models\SeedData.cs
 # Update generated code
 
 
+# Add search
+
+
+# Add a new field
+dotnet ef migrations add rating
+dotnet ef database update
+
+# Optional: Drop and create new database
+dotnet ef database drop
+dotnet ef migrations add InitialCreate
+dotnet ef database update
+
+# Add validation
+
 
 
 
