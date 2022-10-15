@@ -23,10 +23,28 @@ ni -Type File .\Models\Course.cs -Force
 ```
 
 
-The Student entity
-The Enrollment entity
-The Course entity
-Scaffold Student pages
+## The Student entity
+
+## The Enrollment entity
+
+## The Course entity
+
+## Scaffold Student pages
+
+```
+dotnet add package Microsoft.EntityFrameworkCore.SQLite
+dotnet add package Microsoft.EntityFrameworkCore.SqlServer
+dotnet add package Microsoft.EntityFrameworkCore.Design
+dotnet add package Microsoft.EntityFrameworkCore.Tools
+dotnet add package Microsoft.VisualStudio.Web.CodeGeneration.Design
+dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
+
+
+dotnet tool install --global dotnet-aspnet-codegenerator
+
+```
+
+
 Database connection string
 Update the database context class
 Program.cs
