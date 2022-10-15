@@ -42,6 +42,8 @@ dotnet add package Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore
 
 dotnet tool install --global dotnet-aspnet-codegenerator
 
+dotnet aspnet-codegenerator razorpage -m Student -dc ContosoUniversity.Data.SchoolContext -udl -outDir Pages\Students --referenceScriptLibraries -sqlite
+
 ```
 
 
