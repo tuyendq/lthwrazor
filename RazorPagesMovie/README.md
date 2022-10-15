@@ -40,6 +40,10 @@ dotnet ef database update
 # Seed the database
 ni -Type File .\Models\SeedData.cs
 
+# Update generated code
+
+
+
 
 
 ```
