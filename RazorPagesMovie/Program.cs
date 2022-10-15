@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using RazorPagesMovie.Models;
 using Microsoft.Extensions.DependencyInjection;
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,6 +9,12 @@ builder.Services.AddDbContext<RazorPagesMovieContext>(options =>
     options.UseSqlite(builder.Configuration.GetConnectionString("RazorPagesMovieContext") ?? throw new InvalidOperationException("Connection string 'RazorPagesMovieContext' not found.")));
 
 var app = builder.Build();
+// Initialize/Seed database if there NO movie exists
+using (var scope = app.Services.CreateScope())
+{
+  var services = scope.ServiceProvider;
+  SeedData.Initialize(services);
+}
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())

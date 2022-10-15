@@ -33,8 +33,12 @@ dotnet add package Microsoft.EntityFrameworkCore.Sqlite
 dotnet-aspnet-codegenerator razorpage -m Movie -dc RazorPagesMovieContext -udl -outDir Pages/Movies --referenceScriptLibraries -sqlite
 
 dotnet tool install --global dotnet-ef
+dotnet tool update --global dotnet-ef
 dotnet ef migrations add InitialCreate
 dotnet ef database update
+
+# Seed the database
+ni -Type File .\Models\SeedData.cs
 
 
 
