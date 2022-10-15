@@ -14,7 +14,13 @@ If you're new to Razor Pages, go through the [Get started with Razor Pages](http
 ## Set up the site style
 
 
-The data model
+## The data model
+```
+ni -Type File .\Models\Student.cs -Force
+
+```
+
+
 The Student entity
 The Enrollment entity
 The Course entity
