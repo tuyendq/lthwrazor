@@ -47,12 +47,32 @@ dotnet aspnet-codegenerator razorpage -m Student -dc ContosoUniversity.Data.Scho
 ```
 
 
-Database connection string
-Update the database context class
+## Database connection string
+
+## Update the database context class
 Program.cs
-Create the database
-Seed the database
-View the database
-Asynchronous EF methods in ASP.NET Core web apps
-Performance considerations
-Next steps
+
+## Create the database
+
+## Seed the database
+
+## View the database
+
+
+## Asynchronous EF methods in ASP.NET Core web apps
+
+
+## Performance considerations
+
+
+## Next steps
+
+
+## Referrences
+
+```
+dotnet ef migrations add InitialCreate
+# dotnet ef migrations remove # To undo
+dotnet ef database update
+```
+
