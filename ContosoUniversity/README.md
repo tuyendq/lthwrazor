@@ -56,6 +56,10 @@ Program.cs
 
 ## Seed the database
 
+```
+ni -Type File .\Data\DbInitializer.cs -Force
+```
+
 ## View the database
 
 
